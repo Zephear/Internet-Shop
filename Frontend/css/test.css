@@ -1,0 +1,248 @@
+:root {
+  --header-color: #1a1a1d80;
+  --text-color: #f7faff;
+  --buble-background: #1a1a1d4d;
+  --button-color: #1a0933;
+  --button-text-color: #fcfcfd;
+  --run-line-text: #360159;
+}
+
+/* base styles */
+body {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  background-color: cornflowerblue;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1968px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Header-section */
+.header {
+  background-color: var(--header-color);
+  margin: 0; /* ✅ ВИПРАВЛЕНО: прибрав відступи */
+  border-radius: 0; /* ✅ Можна залишити 0 або видалити */
+  position: relative;
+  z-index: 10;
+}
+
+.header-logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.accent {
+  font-size: 200px;
+  display: flex;
+  justify-content: end;
+  padding-right: 70px;
+}
+
+.header-item {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0; /* ✅ Додав padding замість margin */
+}
+
+.header-logo-container {
+  display: flex;
+  padding-left: 20px;
+  padding-right: 30px;
+  align-items: center;
+}
+
+.header-list {
+  display: flex;
+  gap: 64px;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+  padding-left: 100px;
+  padding-right: 20px;
+}
+
+.lang-switcher {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 66px;
+}
+
+.header-icon {
+  width: 30px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.lang-text {
+  width: 26px;
+  height: 18px;
+}
+
+.arrow-icon {
+  width: 12px;
+  height: 12px;
+}
+
+.world-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Hero-section */
+.hero-section {
+  width: 100%;
+  min-height: calc(100vh - 80px); /* ✅ Висота екрану мінус висота хедера */
+  background-image: url('../figures/hero-background1.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0; /* ✅ Прибрав всі margins */
+  padding: 0; /* ✅ Прибрав padding */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ✅ Окремий контейнер для hero без padding */
+.hero-section .container {
+  padding: 0 24px; /* Залишаємо тільки бокові відступи */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-title {
+  margin-top: 42px;
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: -0.06em; /* ✅ Виправлено -6% */
+  line-height: 1;
+  font-size: 325px;
+  margin-bottom: 0;
+}
+
+.hero-buble-container {
+  background-color: var(--buble-background);
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 500px;
+  margin-left: 50px;
+}
+
+.hero-buble {
+  line-height: 1.2;
+  letter-spacing: 1px;
+  font-family: Jost, sans-serif;
+  font-size: 35px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.hero-wrap {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 40px; /* ✅ Відступ знизу перед run-line */
+}
+
+.hero-to-shop {
+  border-radius: 40px;
+  padding: 30px 65px;
+  color: var(--button-text-color);
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: Jost, sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: var(--button-color);
+  border: none; /* ✅ Виправлено border */
+  transition: transform 0.2s;
+}
+
+.hero-to-shop:hover {
+  transform: scale(1.05);
+}
+
+.hero-button-container {
+  display: flex;
+  padding-right: 70px;
+  align-items: end;
+}
+
+/* Run-line */
+.run-line {
+  margin-top: 0; /* ✅ ВИПРАВЛЕНО: прибрав відступ */
+  position: relative;
+  z-index: 5;
+}
+
+.run-line-content {
+  display: flex;
+  background: linear-gradient(to bottom, #ffffff, #8578fa);
+  align-items: center;
+  overflow: hidden;
+}
+
+.run-line-para {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  padding: 15px 20px; /* ✅ Збільшив padding */
+  flex-grow: 1;
+  margin-bottom: 0;
+  font-size: 18px;
+  color: var(--run-line-text);
+  white-space: nowrap;
+}
+
+.run-line-para::after {
+  content: '\2605';
+  color: #2e004b;
+  font-size: 25px;
+  margin-left: 30px;
+  text-align: center;
+}

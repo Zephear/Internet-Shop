@@ -1,110 +1,356 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CyberField Store</title>
-    <link rel="stylesheet" href="/Frontend/css/style.css" />
-    <link rel="stylesheet" href="/Backend/script.js" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>CyberField Store</title>
   </head>
   <body>
-    <section class="first-slide">
-      <header class="head">
-        <div class="logo">
-          <a href="">
+    <header class="header">
+      <div class="container">
+        <nav class="header-nav">
+          <div class="header-logo-container">
             <img
-              src="/Frontend/css/figures/logo.png"
-              class="logo-img"
-              alt="logo"
+              class="header-logo"
+              src="./figures/logo1.png"
+              alt="Логотип компанії"
             />
-          </a>
-        </div>
-
-        <nav class="navigation">
-          <div class="menu-div">
-            <ul class="nav-menu">
-              <li><a href="#">Каталог</a></li>
-              <li><a href="#">Про нас</a></li>
-              <li><a href="#">Акції</a></li>
-              <li><a href="#">Контакти</a></li>
-            </ul>
           </div>
-
-          <div class="div-icons">
-            <ul class="nav-icons-list">
-              <li>
-                <a href=""
-                  ><img
-                    src="/Frontend/css/figures/mdi_cart.png"
-                    class="nav-icons"
-                    alt="cart"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <img
-                    src="/Frontend/css/figures/mdi_user.png"
-                    class="nav-icons"
-                    alt="user"
-                  />
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="language-selector">
-            <div class="div-lang">
+          <ul class="header-list">
+            <li><a class="header-item" href="#hero-section">Каталог</a></li>
+            <li><a class="header-item" href="#products-section">Про нас</a></li>
+            <li><a class="header-item" href="#hits-section">Акції</a></li>
+            <li><a class="header-item" href="#contact-section">Контакти</a></li>
+          </ul>
+          <div class="header-actions">
+            <a href="/cart" class="action-btn" aria-label="Кошик">
               <img
-                src="/Frontend/css/figures/Icon.png"
-                class="planet"
-                alt="planet"
+                class="header-icon"
+                src="/Frontend/figures/busket.svg"
+                alt=""
               />
-              <a href="#" class="lang-link">EN</a>
+            </a>
+            <a
+              href="/profile"
+              class="action-btn"
+              aria-label="Особистий кабінет"
+            >
               <img
-                src="/Frontend/css/figures/Shape.png"
+                class="header-icon"
+                src="/Frontend/figures/contact.svg"
+                alt=""
+              />
+            </a>
+            <button
+              type="button"
+              class="lang-switcher"
+              aria-label="Змінити мову"
+            >
+              <img
+                class="header-icon world-icon"
+                src="/Frontend/figures/World.png"
+                alt=""
+              />
+              <img class="lang-text" src="/Frontend/figures/EN.svg" alt="EN" />
+              <img
                 class="arrow-icon"
-                alt="arrow"
+                src="/Frontend/figures/arrow.svg"
+                alt=""
               />
-            </div>
+            </button>
           </div>
         </nav>
-      </header>
-      <div class="h1-div">
-        <h1 class="first-slide-title">CyberField</h1>
       </div>
-      <div class="hooded-figure">
-        <img src="/Frontend/css/figures/anonymus.png" alt="Hooded figure" />
+    </header>
+    <main>
+      <section class="hero-section">
+        <div class="container">
+          <h1 class="hero-title">
+            CyberField
+            <div class="accent">Store</div>
+          </h1>
+          <div class="hero-wrap">
+            <div class="hero-buble-container">
+              <p class="hero-buble">
+                Сувеніри та продукція з айдентикою CyberFieldNeT
+              </p>
+            </div>
+            <div class="hero-button-container">
+              <button class="hero-to-shop" type="submit">
+                Перейти в магазин
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="run-line">
+        <div class="run-line-content">
+          <p class="run-line-para">Фірмові сувеніри для команди й партнерів</p>
+          <p class="run-line-para">CyberField — стиль у кожному сувенірі</p>
+          <p class="run-line-para">Доступні ціни</p>
+          <p class="run-line-para">Подарунки, що надихають на перемоги</p>
+          <p class="run-line-para">
+            CyberField — мерч із характером кібербезпеки
+          </p>
+        </div>
+      </section>
+      <section class="products-section">
+        <div class="container">
+          <div class="products-title-container">
+            <h2 class="products-title">Категорії товарів</h2>
+            <p class="products-content">
+              Від аксесуарів до корпоративних подарунків — мерч, що об’єднує
+              спільноту
+            </p>
+          </div>
+          <ul class="cards">
+            <article class="cards-item">
+              <li>
+                <img
+                  class="cup-image"
+                  src="/Frontend/figures/cup.png"
+                  alt="Сувеніри"
+                />
+                <p class="cards-title">Сувеніри</p>
+              </li>
+            </article>
+            <article class="cards-item">
+              <li>
+                <img
+                  class="vocabrulary-image"
+                  src="/Frontend/figures/vocabrulary.png"
+                  alt="Словники"
+                />
+                <p class="cards-title">Словники</p>
+              </li>
+            </article>
+          </ul>
+          <div class="arrows">
+            <button class="arrow-btn" aria-label="Previous">&#8592;</button>
+
+            <button class="arrow-btn" aria-label="Next">&#8594;</button>
+          </div>
+        </div>
+      </section>
+      <section class="hits-section">
+        <div class="container">
+          <div class="hits-content-container">
+            <h2 class="hits-title">Хіти продажів</h2>
+            <p class="hits-content">
+              Найпопулярніші сувеніри CyberFieldNeT.<br />
+              Вони стали улюбленцями команди та партнерів — час обрати свій!
+            </p>
+          </div>
+
+          <ul class="hits-cards-container">
+            <article class="hits-cards">
+              <li>
+                <img
+                  class="hits-img"
+                  src="/Frontend/figures/book.png"
+                  alt="Хіт 1"
+                />
+                <div class="hits-wrap">
+                  <div class="hits-content-wrap"></div>
+                  <p class="hits-cards-title">
+                    Чашка з айдентикою CyberFieldNeT
+                  </p>
+                  <div class="hits-price-wrap">
+                    <p class="price">20$</p>
+                  </div>
+                </div>
+                <p class="hits-description">
+                  Практичний сувенір для команди, партнерів і справжніх фанів
+                  бренду
+                </p>
+                <div class="hits-button-container">
+                  <button class="hits-button" type="submit">Замовити</button>
+                </div>
+              </li>
+            </article>
+            <article class="hits-cards">
+              <li>
+                <img
+                  class="hits-img"
+                  src="/Frontend/figures/cup.png"
+                  alt="Хіт 2"
+                />
+                <div class="hits-wrap">
+                  <div class="hits-content-wrap"></div>
+                  <p class="hits-cards-title">
+                    Чашка з айдентикою CyberFieldNeT
+                  </p>
+                  <div class="hits-price-wrap">
+                    <p class="price">20$</p>
+                  </div>
+                </div>
+                <p class="hits-description">
+                  Практичний сувенір для команди, партнерів і справжніх фанів
+                  бренду
+                </p>
+                <div class="hits-button-container">
+                  <button class="hits-button" type="submit">Замовити</button>
+                </div>
+              </li>
+            </article>
+            <article class="hits-cards">
+              <li>
+                <img
+                  class="hits-img"
+                  src="/Frontend/figures/vocabrulary.png"
+                  alt="Хіт 3"
+                />
+                <div class="hits-wrap">
+                  <div class="hits-content-wrap"></div>
+                  <p class="hits-cards-title">
+                    Чашка з айдентикою CyberFieldNeT
+                  </p>
+                  <div class="hits-price-wrap">
+                    <p class="price">20$</p>
+                  </div>
+                </div>
+                <p class="hits-description">
+                  Практичний сувенір для команди, партнерів і справжніх фанів
+                  бренду
+                </p>
+                <div class="hits-button-container">
+                  <button class="hits-button" type="submit">Замовити</button>
+                </div>
+              </li>
+            </article>
+          </ul>
+        </div>
+      </section>
+      <section class="description-section">
+        <div class="container">
+          <div class="description-wrap">
+            <div class="description-hacker">
+              <img
+                class="description-hacker-img"
+                src="/Frontend/figures/description-hacker.png"
+                alt="Хакер"
+              />
+            </div>
+            <div class="description-text-container">
+              <h2 class="description-title">Безпека, яка має символ</h2>
+              <p class="description-content">
+                Наша сувенірна продукція — це не просто подарунки. Це символи
+                цінностей компанії, які нагадують про захист, єдність та
+                надійність у кожній деталі.
+              </p>
+              <div class="description-buble">
+                <p class="description-buble-text">Офіційні ліцензії</p>
+              </div>
+              <div class="description-buble">
+                <div class="description-svg-buble">
+                  <img src="" alt="">
+                </div>
+                <p class="description-buble-text">Повернення 14 днів</p>
+              </div>
+              <div class="description-buble">
+                <p class="description-buble-text">Сертифіковані продукти</p>
+              </div>
+              <div class="description-buble">
+                <div class="description-svg-buble">
+                  <img src="" alt="">
+                </div>
+                <p class="description-buble-text">Українська підтримка 24/7</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          class="description-floor"
+          src="/Frontend/figures/floor.png"
+          alt="Пол"
+        />
+      </section>
+      <section class="feedback-section">
+        <div class="container">
+          <ul>
+            <li>
+              <img src="" alt="" />
+              <p>
+                “Раніше ми недооцінювали кіберзахист, але після кількох випадків
+                шахрайства вирішили звернутися сюди. Тепер спокійно користуємось
+                онлайн-банкінгом і діти мають безпечний доступ до інтернету.
+                Дуже подобається атмосфера бренду — навіть чашка з логотипом
+                нагадує, що наші дані під захистом.”
+              </p>
+              <p>— Ірина, Київ</p>
+            </li>
+            <li>
+              <img src="" alt="" />
+              <p>
+                “Ми звернулися до компанії у момент, коли потрібно було
+                терміново захистити дані клієнтів. Усе налаштували швидко,
+                зрозуміло і з повною підтримкою. Сувенірна продукція стала
+                приємним бонусом — вона нагадує нашій команді, що ми працюємо з
+                надійними партнерами.”
+              </p>
+              <p>— Олександр, власник ІТ-агенції</p>
+            </li>
+            <li>
+              <img src="" alt="" />
+              <p>
+                “Як фрілансеру, мені важливо, щоб мої акаунти та робочі файли
+                були захищені. Тут я знайшов прості та доступні рішення, які
+                реально працюють. А фірмовий мерч — це класний спосіб відчувати
+                себе частиною спільноти, де довіра та безпека понад усе.”
+              </p>
+              <p>— Андрій, UI/UX дизайнер</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section clas="run-line">
+        <div class="container">
+          <p>Фірмові сувеніри для команди й партнерів</p>
+          <p>CyberField — стиль у кожному сувенірі</p>
+          <p>Подарунки, що надихають на перемоги</p>
+        </div>
+      </section>
+      <section class="contact-section">
+        <div class="container">
+          <h2>Маємо подарунок для вас -10% на першу покупку!</h2>
+          <button type="submit">Перейти в магазин</button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer-section">
+      <div class="container">
+        <img src="/Frontend/figures/logo.jpg" alt="" />
+        <ul class="footer-list">
+          <li class="footer-item"><a href="#hero-section">Каталог</a></li>
+          <li class="footer-item"><a href="#products-section">Про нас</a></li>
+          <li class="footer-item"><a href="#hits-section">Акції</a></li>
+          <li class="footer-item"><a href="#contact-section">Контакти</a></li>
+        </ul>
+        <address>
+          <ul>
+            <li>
+              <a href="">Адреса: Вінниця, вул. Науки, 155</a>
+              <a href="mailto:cyberfieldnet@email.com"
+                >Email:cyberfieldnet@email.com</a
+              >
+              <a href="tel:+380000000000">Phone: +38 (000) 000-00-00</a>
+            </li>
+          </ul>
+        </address>
       </div>
-
-      <div class="store-text">
-    <h2>Store</h2>
-    
-    <div class="store-footer">
-        <div class="store-description">
-            <p>Сувеніри та продукція <br> з айдентикою CyberFieldNeT</p>
-        </div>
-        
-        <div class="btn">
-            <button class="btn-shop">Перейти в магазин</button>
-        </div>
-    </div>
-</div>
-
-    </section>
-
-    <section class="goods"></section>
-    <section class="hits"></section>
-    <section class="security"></section>
-    <section class="feedbacks"></section>
-    <section class="last-slide"></section>
-
-    <footer class="foot"></footer>
+    </footer>
   </body>
 </html>
