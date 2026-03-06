@@ -67,18 +67,17 @@ ul {
   width: 40px;
   height: 40px;
 }
-.accent {
-  font-size: 200px;
-  display: flex;
-  justify-content: end;
-  padding-right: 70px;
-}
+
 .header-item {
   color: var(--text-color);
   text-decoration: none;
   font-weight: 700;
   font-size: 18px;
   line-height: 1;
+  transition: color 0.3s ease;
+}
+.header-item:hover {
+  color: #C03EF8;
 }
 .header-nav {
   display: flex;
@@ -117,6 +116,7 @@ ul {
   height: 40px;
   object-fit: contain;
 }
+
 .lang-text {
   width: 26px;
   height: 18px;
@@ -129,43 +129,85 @@ ul {
   width: 20px;
   height: 20px;
 }
+
+
 /* Hero-section */
+
+
 .hero-section {
   padding: 220px 0 70px 0;
-  background-image: url(../figures/hero-background1.jpg);
+  background-image: url(../figures/hero-background.jpg); 
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
+  position: relative; 
+  overflow: hidden; 
 }
+
+.hero-person {
+  position: absolute;
+  bottom: -10px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  height: 85%;
+  z-index: 2; 
+  pointer-events: none; 
+}
+
 .hero-title {
   margin-top: 42px;
-  text-align: center;
+  margin-bottom: 0;
   font-weight: 900;
-  letter-spacing: -6%;
   line-height: 1;
-  font-size: 325px;
-  margin-bottom: 0;
+  font-size: 300px;
+  position: relative;
+  z-index: 1; 
+  white-space: nowrap;
+  width: max-content; 
+  left: 50%;
+  letter-spacing: -3%;
+  transform: translateX(-50%);
 }
-.hero-buble-container {
-  background-color: var(--buble-background);
-  border-radius: 20px;
-  padding: 20px;
-  max-width: 500px;
-  margin-left: 50px;
+
+.accent {
+  font-size: 230px;
+  display: flex;
+  justify-content: end;
+  padding-right: 80px;
+  font-weight: 900;
+  position: relative;
+  z-index: 1; 
 }
-.hero-buble {
-  line-height: 1.2;
-  letter-spacing: 1px;
-  font-family: Jost, sans-serif;
-  font-size: 35px;
-  font-weight: 400;
-  margin-bottom: 0;
-}
+
+/* --- ІНТЕРФЕЙС (ШАР 3: НАЙВИЩИЙ) --- */
 .hero-wrap {
   display: flex;
   flex-grow: 1;
   justify-content: space-between;
+  
+  position: relative;
+  z-index: 3; /* Шар 3: ПОВЕРХ персонажа, щоб кнопка точно натискалася */
 }
+  .hero-buble-container {
+    background-color: var(--buble-background);
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 500px;
+    margin-left: 50px;
+  }
+  .hero-buble {
+    line-height: 1.2;
+    letter-spacing: 1px;
+    font-family: Jost, sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+  .hero-wrap {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
 .hero-to-shop {
   border-radius: 40px;
   padding: 30px 65px;
@@ -177,12 +219,19 @@ ul {
   cursor: pointer;
   background-color: var(--button-color);
   border-color: linear-gradient(to right, #28168a, #080343);
+  transition: all 0.3s ease-in-out;
+}
+.hero-to-shop:hover {
+  background-color: #740E9F;
+
+  transform: scale(1.02); 
 }
 .hero-button-container {
   display: flex;
   padding-right: 70px;
   align-items: end;
 }
+
 /* run-line-section*/
 .run-line {
   overflow: hidden;
@@ -268,6 +317,7 @@ ul {
   gap: 60px;
   margin-top: 100px;
 }
+
 .cards-item {
   border-radius: 20px;
   padding: 30px 60px;
@@ -276,6 +326,15 @@ ul {
     rgba(184, 162, 234, 0.3),
     rgba(118, 100, 185, 0.3)
   );
+    transition: all 0.4s ease-in-out;
+}
+.cards-item:hover {
+  background: linear-gradient(
+    rgba(184, 162, 234, 0.1),
+    rgba(118, 100, 185, 0.1)
+  );
+  transform: scale(1.01);
+
 }
 .cards-item::before {
   content: '';
@@ -298,10 +357,14 @@ ul {
   font-weight: 400;
   font-size: 35px;
   letter-spacing: -3%;
-  text-decoration: underline;
   text-align: center;
   margin-bottom: 0;
   cursor: pointer;
+}
+.cards-title:hover {
+  color: #C03EF8;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
 }
 .cup-image {
   width: 570px;
@@ -332,15 +395,16 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+    transition: all 0.3s ease-in-out;
 }
 .arrow-btn:hover {
   border-color: var(--arrow-hover);
   color: #fff;
-  transform: scale(1.1);
+  transform: scale(1.05);
+
+  border-color: #c03ef8b7;
 }
-.arrow-btn:focus {
-  outline: none;
-}
+
 /* Hits Section */
 .hits-section {
   background-repeat: no-repeat;
@@ -391,6 +455,15 @@ ul {
     rgba(118, 100, 185, 0.05)
   );
   border: 1px solid #180560;
+   transition: all 0.4s ease-in-out;
+}
+.hits-cards:hover {
+  background: linear-gradient(
+    rgba(184, 162, 234, 0.01),
+    rgba(118, 100, 185, 0.01)
+  );
+  transform: scale(1.01);
+ 
 }
 .hits-cards::before {
   content: '';
@@ -451,6 +524,12 @@ ul {
   color: #1a0933;
   border: none;
   cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.hits-button:hover {
+  background-color: #740E9F;
+  color: #fff;
+  transform: scale(1.02);
 }
 .hits-button-container {
   padding-top: 50px;
@@ -563,6 +642,7 @@ ul {
   padding-top: 100px;
   z-index: 1;
 }
+/* Feedback */
 .feedback-section {
   background: linear-gradient(to bottom, #150023, rgba(20, 20, 22, 0.2));
   padding-bottom: 184px;
@@ -583,11 +663,18 @@ ul {
   justify-content: center;
   gap: 120px;
 }
+
 .feedback-frame {
   max-width: 440px;
   height: 600px;
   border-radius: 20px;
   background-color: #dcdbe24d;
+   transition: all 0.3s ease-in-out;
+}
+.feedback-frame:hover {
+  background-color: rgba(175, 91, 196, 0.549);
+  transform: scale(1.01);
+ 
 }
 .feedback-content {
   font-weight: 400px;
@@ -761,9 +848,12 @@ ul {
   border-radius: 50px;
   border: 1px solid #28168a;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 .contact-btn:hover {
-  opacity: 0.8;
+
+  transform: scale(1.02);
+  background-color: #740E9F;
 }
 .footer-section {
   color: #ffffff;
@@ -789,6 +879,9 @@ ul {
   justify-content: space-between;
   height: 150px;
 }
+.footer-logo{
+  cursor: pointer;
+}
 .created-by {
   font-size: 14px;
   font-weight: 300;
@@ -813,12 +906,19 @@ ul {
   color: #ffffff;
   text-decoration: none;
   text-transform: capitalize;
+  transition: all 0.3s ease-in-out;
+}
+.footer-item a:hover {
+  color: #9130bb;
+  text-decoration: underline;
+  
 }
 .footer-address {
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
   line-height: 1.6;
+  cursor: pointer;
 }
 .footer-address p {
   margin: 0 0 10px 0;
